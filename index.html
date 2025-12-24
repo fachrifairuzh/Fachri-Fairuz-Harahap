@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fachri Fairuz | Information Systems Student — UMSU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'umsu-blue': '#0d4a82',
+            'umsu-gold': '#c99b2d',
+            'si-green': '#2e7d32',
+            'light': '#f9fafb',
+            'dark': '#1e293b'
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section-delay {
+      animation-delay: 0.2s;
+    }
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #2e7d32;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px -5px rgba(46, 125, 50, 0.15);
+    }
+    .typewriter::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .campus-badge {
+      background: linear-gradient(135deg, #0d4a82, #c99b2d);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+    .si-badge {
+      background: linear-gradient(135deg, #2e7d32, #1b5e20);
+      color: white;
+    }
+    .photo-frame {
+      position: relative;
+      width: 128px;
+      height: 128px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: 4px solid rgba(255,255,255,0.4);
+    }
+   .photo-placeholder {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  background-image: url("fchr.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-umsu-blue to-umsu-gold text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- ✅ TO UPDATE YOUR PHOTO: MODIFY THE <img> TAG BELOW -->
+      <div class="photo-frame">
+        <!-- 
+          🔹 OPTION 1 (Recommended): Replace the src URL with your actual photo.
+          Ensure the link is direct, public, and has no trailing spaces.
+        -->
+        <img src="image/fchr.jpeg" alt="Fachri Fairuz" class="w-full h-full object-cover">
+
+        <!-- 
+          🔹 OPTION 2 (Fallback): If you prefer a placeholder, comment out the <img> above 
+          and uncomment the div below:
+        
+        <div class="photo-placeholder">
+          Photo Not<br>Uploaded
+        </div>
+        -->
+      </div>
+
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">Fachri Fairuz</h1>
+      <div class="typewriter text-xl md:text-2xl font-light mb-3">
+        Information Systems Student | UMSU
+      </div>
+      <div class="campus-badge mb-4">Universitas Muhammadiyah Sumatera Utara</div>
+      <p class="text-lg max-w-2xl mx-auto opacity-95">
+        Focused on designing information systems that solve real business needs — especially for SMEs and educational institutions in Medan.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    <!-- About Section -->
+    <section class="mb-16 fade-in">
+      <h2 class="text-2xl font-bold text-umsu-blue mb-6 pb-2 border-b-2 border-umsu-gold inline-block">About Me</h2>
+      <div class="bg-white rounded-xl shadow-sm p-6 space-y-4">
+        <p class="text-gray-700 leading-relaxed">
+          Undergraduate student in the <span class="font-medium">Information Systems program, Faculty of Engineering, Universitas Muhammadiyah Sumatera Utara (UMSU)</span>. 
+          More passionate about <em>how technology can solve real business problems</em> than just writing code.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          I often conduct informal interviews with small business owners, photocopy shop staff, or campus administrative personnel to understand their workflows. 
+          In my Systems Analysis class, my lecturer once said: 
+          <em>“If you haven’t spoken to the user at least three times, don’t draw your ERD yet.”</em>
+        </p>
+        <p class="text-gray-700 leading-relaxed italic bg-green-50 p-4 rounded-lg border-l-4 border-si-green">
+          <span class="font-semibold">Field note:</span> 
+          During observations at UMSU’s finance office, I discovered they still use Excel 2007 — 
+          and the file is named <code>keuangan_FINAL_v3_revisi_akhir.xlsx</code>. 
+          That insight became the foundation for my Systems Analysis & Design capstone project.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="mb-16 fade-in section-delay">
+      <h2 class="text-2xl font-bold text-umsu-blue mb-6 pb-2 border-b-2 border-umsu-gold inline-block">Information Systems Projects</h2>
+      
+      <!-- Project 1 -->
+      <div class="project-card bg-white rounded-xl shadow-sm overflow-hidden mb-8">
+        <div class="p-6">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="px-3 py-1 si-badge text-white text-sm rounded-full font-medium">📊 Systems Analysis</span>
+            <span class="text-gray-500 text-sm">UMSU, Medan | 2024</span>
+          </div>
+          <h3 class="text-xl font-bold text-dark mb-3">Design of an Integrated Academic Information System (IAIS)</h3>
+          <p class="text-gray-700 mb-4">
+            Feasibility study and preliminary design for a unified academic system at UMSU — integrating academic administration, library, and finance departments. 
+            Conducted observations across 3 faculties, interviewed 7 administrative staff, and analyzed existing manual workflows.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-si-green mb-1">Key Deliverables:</h4>
+              <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                <li>Context Diagram & DFD Level 0–2</li>
+                <li>ERD & Database Normalization</li>
+                <li>Technical & economic feasibility study (3-year ROI analysis)</li>
+                <li>UI mockups (Figma)</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-si-green mb-1">Methodology:</h4>
+              <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                <li>Structured interviews & participatory observation</li>
+                <li>SWOT & PIECES framework analysis</li>
+                <li>Business process modeling (BPMN)</li>
+                <li>Aligned with ISO/IEC 15288 standards</li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-sm italic text-gray-600 bg-amber-50 p-3 rounded">
+            <span class="font-medium">Lesson learned:</span> 
+            “User needs often differ from what they verbally express. 
+            A campus photocopy operator said they wanted a ‘fast system’, but what they truly meant was: 
+            <em>‘Don’t let us print the wrong academic letter because student names look alike’</em>.”
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card bg-white rounded-xl shadow-sm overflow-hidden">
+        <div class="p-6">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="px-3 py-1 bg-umsu-gold text-white text-sm rounded-full font-medium">🏪 Local Business</span>
+            <span class="text-gray-500 text-sm">Jl. Setia Budi, Medan | 2023</span>
+          </div>
+          <h3 class="text-xl font-bold text-dark mb-3">Order & Inventory Management System for “CV. Putra Jaya” Welding Workshop</h3>
+          <p class="text-gray-700 mb-4">
+            This welding workshop near UMSU still relies on notebooks and calculators — leading to frequent material miscalculations and missed appointments. 
+            I designed a simple web-based system focused on business process improvement, not cutting-edge tech.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-si-green mb-1">Mapped Business Workflow:</h4>
+              <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                <li>Order intake → material & time estimation</li>
+                <li>Steel procurement → stock in/out tracking</li>
+                <li>Job status: <em>In Progress, Ready for Delivery, Completed</em></li>
+                <li>Automated daily & monthly reports</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-si-green mb-1">Solution Highlights:</h4>
+              <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                <li>Responsive web UI (mobile-friendly)</li>
+                <li>Offline-first: data persists in browser</li>
+                <li>Simple invoice generation (PDF format)</li>
+                <li>2-hour Zoom training + illustrated user guide</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="mb-16 fade-in section-delay">
+      <h2 class="text-2xl font-bold text-umsu-blue mb-6 pb-2 border-b-2 border-umsu-gold inline-block">Information Systems Competencies</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h3 class="font-bold text-lg text-dark mb-4 flex items-center">
+            <span class="w-3 h-3 bg-si-green rounded-full mr-2"></span>
+            Analysis & Design
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-si-green mr-2">•</span>
+              <span>Process Modeling (BPMN, DFD, UML)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-si-green mr-2">•</span>
+              <span>Data Modeling (ERD, Normalization)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-si-green mr-2">•</span>
+              <span>Feasibility Analysis (Technical, Economic, Operational)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-si-green mr-2">•</span>
+              <span>Requirements Elicitation (Interviews, Surveys, Observation)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6">
+          <h3 class="font-bold text-lg text-dark mb-4 flex items-center">
+            <span class="w-3 h-3 bg-si-green rounded-full mr-2"></span>
+            Supporting Technologies
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-si-green mr-2">•</span>
+              <span>Databases: MySQL, PostgreSQL</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-si-green mr-2">•</span>
+              <span>UI/UX Design: Figma, Adobe XD</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-si-green mr-2">•</span>
+              <span>Web Fundamentals: HTML, CSS, JavaScript</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-si-green mr-2">•</span>
+              <span>Tools: Lucidchart, draw.io, Microsoft Visio</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="mb-16 fade-in section-delay">
+      <h2 class="text-2xl font-bold text-umsu-blue mb-6 pb-2 border-b-2 border-umsu-gold inline-block">Education</h2>
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+          <div class="flex-shrink-0 w-16 h-16 rounded-full bg-umsu-blue flex items-center justify-center text-white font-bold text-lg">
+            IS
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-dark">Bachelor of Information Systems</h3>
+            <p class="text-gray-700 font-medium">Universitas Muhammadiyah Sumatera Utara (UMSU)</p>
+            <p class="text-gray-600">2025 – Present | Medan, North Sumatra</p>
+            <p class="mt-2 text-gray-700">
+              GPA: 3.68/4.00 (through Semester 6)  
+              <span class="ml-4">•</span> Teaching Assistant: <em>Systems Analysis & Design</em>  
+              <span class="ml-4">•</span> Core Team Member: Academic Handbook for IS Program (2024 Edition)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="fade-in section-delay">
+      <h2 class="text-2xl font-bold text-umsu-blue mb-6 pb-2 border-b-2 border-umsu-gold inline-block">Contact</h2>
+      <div class="bg-white rounded-xl shadow-sm p-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="text-center p-4 bg-blue-50 rounded-lg">
+            <div class="text-umsu-blue font-bold mb-1">Email</div>
+            <div class="text-gray-700 break-words">fachrifairuz80@gmail.com</div>
+          </div>
+          <div class="text-center p-4 bg-green-50 rounded-lg">
+            <div class="text-umsu-blue font-bold mb-1">Location</div>
+            <div class="text-gray-700">Medan, North Sumatra, Indonesia</div>
+          </div>
+          <div class="text-center p-4 bg-amber-50 rounded-lg">
+            <div class="text-umsu-blue font-bold mb-1">Program</div>
+            <div class="text-gray-700">Information Systems — UMSU</div>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
+          <p>
+            This website was hand-coded — no AI generators used.  
+            To update the profile photo, edit the <code>&lt;img src="image/fchr.jpeg"&gt;</code> tag in the header (lines ~75–77).  
+            Minor typos are intentionally retained — human learning in progress. 🌱
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-umsu-blue text-white py-6 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <p>© 2025 Fachri Fairuz — Information Systems Student, Universitas Muhammadiyah Sumatera Utara (UMSU)</p>
+      <p class="mt-1 text-sm opacity-80">
+        Built with HTML & CSS. To update photo: <code>&lt;img src="image/fchr.jpeg"&gt;</code>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('section').forEach((section, i) => {
+        if (i > 0) section.classList.add('section-delay');
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
+
